@@ -2,36 +2,123 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Messenger App</title>
+	<title>Messenger</title>
+	<style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #111;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #00ff84;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            margin-top: 20px;
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h2 {
+            color: #00ff84;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #00ff84;
+            font-size: 1.2em;
+        }
+
+        input,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #00ff84;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+            color: #fff;
+            background-color: #222;
+        }
+
+        button {
+            background-color: #00ff84;
+            color: #000;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        button:hover {
+            background-color: #00803d;
+        }
+
+        #messagesContainer {
+            margin-top: 20px;
+        }
+
+        #messagesContainer h3 {
+            color: #00ff84;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        #messagesContainer p {
+            color: #666;
+            font-size: 1em;
+        }
+    </style>
 </head>
 <body>
-<h1>Messenger App</h1>
+<h1>Messenger</h1>
 
-<!-- Registration Form -->
-<h2>Registration</h2>
+
 <form id="registrationForm">
+	<h2>Registration</h2>
 	<label for="regUsername">Username:</label>
-	<input type="text" id="regUsername" name="regUsername" required><br>
+	<input type="text" id="regUsername" name="regUsername" required>
 	<label for="regPassword">Password:</label>
-	<input type="password" id="regPassword" name="regPassword" required><br>
+	<input type="password" id="regPassword" name="regPassword" required>
 	<button type="button" onclick="registerUser()">Register</button>
 </form>
 
-<!-- Send Message Form -->
-<h2>Send Message</h2>
+
 <form id="messageForm">
+	<h2>Send Message</h2>
 	<label for="sendUsername">Username:</label>
-	<input type="text" id="sendUsername" name="sendUsername" required><br>
+	<input type="text" id="sendUsername" name="sendUsername" required>
 	<label for="message">Message:</label>
-	<textarea id="message" name="message" required></textarea><br>
+	<textarea id="message" name="message" required></textarea>
 	<button type="button" onclick="sendMessage()">Send Message</button>
 </form>
 
-<!-- Read Messages Form -->
-<h2>Read Messages</h2>
+
 <form id="readMessagesForm">
+	<h2>Read Messages</h2>
 	<label for="readUsername">Username:</label>
-	<input type="text" id="readUsername" name="readUsername" required><br>
+	<input type="text" id="readUsername" name="readUsername" required>
 	<button type="button" onclick="readMessages()">Read Messages</button>
 	<div id="messagesContainer"></div>
 </form>
