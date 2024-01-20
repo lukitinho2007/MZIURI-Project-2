@@ -12,9 +12,10 @@ repositories {
 dependencies {
 
     compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+
     implementation "org.apache.tomcat.embed:tomcat-embed-core:10.0.20"
     implementation "org.apache.tomcat.embed:tomcat-embed-jasper:10.0.20"
-
+    implementation files('libs/mysql-connector-j-8.3.0.jar')
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
