@@ -23,8 +23,6 @@ public class Application {
         String webappDir = new File("src/main/webapp").getAbsolutePath();
 
         StandardContext ctx = (StandardContext) tomcat.addWebapp(ctxPath, webappDir);
-
-        //declare an alternate location for your "WEB-INF/classes" dir:
         File additionWebInfClasses = new File("build/classes");
         WebResourceRoot resources = new StandardRoot(ctx);
         resources.addPreResources(new DirResourceSet(resources, "/WEB-INF/classes", additionWebInfClasses.getAbsolutePath(), "/"));

@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-        <title>Messenger</title>
-	</head>
-	<body>
-		<!--	WEBSITE BODY	-->
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<title>Messenger App</title>
+</head>
+<body>
+<h1>Messenger App</h1>
+
+<!-- Registration Form -->
+<h2>Registration</h2>
+<form id="registrationForm">
+	<label for="regUsername">Username:</label>
+	<input type="text" id="regUsername" name="regUsername" required><br>
+	<label for="regPassword">Password:</label>
+	<input type="password" id="regPassword" name="regPassword" required><br>
+	<button type="button" onclick="registerUser()">Register</button>
+</form>
+
+<!-- Send Message Form -->
+<h2>Send Message</h2>
+<form id="messageForm">
+	<label for="sendUsername">Username:</label>
+	<input type="text" id="sendUsername" name="sendUsername" required><br>
+	<label for="message">Message:</label>
+	<textarea id="message" name="message" required></textarea><br>
+	<button type="button" onclick="sendMessage()">Send Message</button>
+</form>
+
+<!-- Read Messages Form -->
+<h2>Read Messages</h2>
+<form id="readMessagesForm">
+	<label for="readUsername">Username:</label>
+	<input type="text" id="readUsername" name="readUsername" required><br>
+	<button type="button" onclick="readMessages()">Read Messages</button>
+	<div id="messagesContainer"></div>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="script.js"></script>
+</body>
 </html>
